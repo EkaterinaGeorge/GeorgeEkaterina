@@ -1,0 +1,518 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+<head>
+  <title>Приглашение на свадьбу</title>
+  <style> 
+
+@font-face {
+  font-family: 'Kindentosca';  src: url('Kindentosca.otf') 
+format('opentype');
+  font-weight: normal;
+  font-style: normal; 
+} 
+
+ .script-title, .georgiy, .ekaterina {
+  font-family: 'Kindentosca', cursive; 
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+  body {
+  font-family: Times New Roman, sans-serif;
+  color: #2F4F4F; /* Темно-зелёный */
+  background-color: #FAF8F6;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+ }
+
+ .container {
+  max-width: 450px;
+  margin: auto;
+  background: white;
+  padding-bottom: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+   .hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+ }
+ .hero img {
+  width: 100%;
+  display: block;
+ }
+ .hero::after {
+  content: "";
+  position: absolute;
+  top: 340px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('torn-paper-backgroun.png') no-repeat center / contain;
+  pointer-events: none;
+  z-index: 2;
+ }  
+
+  .names {
+   position: absolute;
+   bottom: 200px;
+   left: 5%;
+   width: 100%;
+   text-align: left;
+   color: #FAF8F6; 
+} 
+
+  .georgiy {
+   font-size: 72px;
+   font-family: 'Kindentosca', cursive;
+   position: relative;
+   left: 0; 
+   top: 0; 
+}
+
+ .ekaterina {
+   font-size: 72px;
+   font-family: 'Kindentosca', cursive;
+   position: relative;
+   left: 120px; 
+   top: -40px;
+ }
+
+  .hero-invite {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  color: white;
+  font-size: 18px;
+  font-family: Times New Roman, sans-serif;
+ }
+
+ .wedding-date {
+    font-size: 18px;
+    font-family: Times New Roman, sans-serif;
+    color: #FAF8F6;
+    position: absolute;
+    bottom: 220px; /* Опусти ниже, если надо */
+    left: 35%;
+    text-align: left;
+}
+.section {
+  padding: 20px;
+  margin: 10px;
+  background: white;
+  position: relative;
+  }  
+
+  .script-title {
+  font-family: 'Kindentosca', cursive;
+  font-size: 36px;
+  margin-bottom: 10px;
+  }
+
+  .location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ font-size: 22px;
+  }
+
+  .palette {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  }
+  .color-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  }  
+
+.dresscode-colors {
+  text-align: center;
+  }
+
+  .button {
+  display: inline-block;  
+  background: #2F4F4F;  
+  color: white;  
+  text-decoration: none;  
+  padding: 10px 20px;  
+  border-radius: 5px;  
+  margin-top: 10px;
+  }
+
+.photo-stack {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    width: 250px; /* Размер фото можно настроить */
+}
+
+.photo-stack::before,
+.photo-stack::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('image4.jpg') no-repeat center / cover;
+    z-index: -1;
+    opacity: 0.7;
+    filter: blur(2px);
+    border-radius: 5px;
+}
+
+.photo-stack::before {
+    top: 8px;
+    left: -8px;
+    transform: rotate(-8deg);
+}
+
+.photo-stack::after {
+    top: -8px;
+    left: 8px;
+    transform: rotate(8deg);
+}
+
+.main-photo {
+    display: block;
+    width: 100%;
+    transform: rotate(-5deg); 
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.full-width-photo {
+    position: relative;
+    margin: 30px 0;
+}
+
+.full-width-photo img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.full-width-photo::before {
+  content: "";
+  position: absolute;
+  top: -125px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('torn-paper-backgroun2.png') no-repeat center / contain;
+  pointer-events: none;
+  z-index: 2;
+ }  
+
+.full-width-photo::after {
+  content: "";
+  position: absolute;
+  top: 135px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('torn-paper-backgroun.png') no-repeat center / contain;
+  pointer-events: none;
+  z-index: 2;
+ }  
+/* Галерея */
+.dresscode-gallery {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.gallery-container {
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.gallery img {
+    width: 90px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80vh;
+    margin: 5% auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.countdown-section {
+    text-align: center;
+    background: #FAF8F6;
+    padding: 30px 0;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.countdown-item {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80px;
+}
+
+.countdown-item span {
+    display: block;
+    font-size: 32px;
+    color: #2F4F4F;
+}
+
+.countdown-item p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.no-kids {
+    background: #FAF8F6;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #444;
+}
+.program-time {
+    font-size: 22px; /* Увеличиваем размер времени */
+    font-weight: bold;
+    color: #2F4F4F; /* Темно-зеленый */
+}
+
+.program-text {
+    font-size: 18px; /* Увеличиваем основной текст */
+    color: #444;
+    margin-bottom: 15px;
+}
+
+
+  </style> 
+</head> 
+
+
+
+<body>  
+ <div class="container">
+  <div class="hero">
+   <img src="image3.jpg" alt="Фото влюбленных">
+   <div class="hero-invite">
+  <div>Приглашение на свадьбу</div>
+  </div> 
+ <div class="names">
+  <span class="georgiy">Георгий</span>
+  <br>  
+<span class="ekaterina">Екатерина</span>
+ </div>
+<div class="wedding-date">ИЮЛЬ 25, 2025</div>
+  </div>
+
+
+<div class="section">
+            <h2 class="script-title">Дорогие гости!</h2>
+            <p>Мы рады пригласить вас разделить с нами один из самых счастливых дней в нашей жизни — нашу свадьбу! Этот день станет для нас особенным, и мы мечтаем провести его в кругу самых дорогих людей. 
+            <br><br>С нетерпением ждём встречи и верим, что вместе мы создадим праздник, который запомнится навсегда!</p>
+<div class="photo-stack">
+    <img src="image4.jpg" alt="Фото пары" class="main-photo">
+
+    </div>
+        </div>
+
+<div class="section">
+  <h2 class="script-title">Локация</h2>  
+<div class="location">
+  <span>г.Караганда | Ресторан "Чайка"  ул.Мичурина, 11а</span>
+  </div>
+<br>
+  <a href="https://2gis.kz/karaganda/geo/70000001067929195" class="button" target="_blank">Посмотреть на карте</a>
+  </div>
+<div class="full-width-photo">
+    <img src="image1.jpg" alt="Детальное фото">
+</div>
+
+
+  <div class="section">
+<div class="section">
+    <h2 class="script-title">Программа дня</h2>
+    <p><span class="program-time">16:00-16:30</span> — <span class="program-text">СБОР ГОСТЕЙ</span> <br> <br> 
+<em>Просим взять с собой хорошее<br> настроение и улыбки, встречаемся на лужайке</em></p><br> 
+    <p><span class="program-time">17:00</span> — <span class="program-text">ЦЕРЕМОНИЯ</span> <br> <br> 
+<em>Вы станете свидетелями самого<br> трогательного момента</em></p><br> 
+    <p><span class="program-time">18:00</span> — <span class="program-text">БАНКЕТ</span> <br> <br> 
+<em>Время вкусной еды,<br> танцев и развлечений</em></p>
+</div>
+ 
+
+ <div class="section">
+  <h2 class="script-title">Дресс-код</h2> 
+ <p>Мы хотим, чтобы этот день был наполнен гармонией и красотой, поддержите нас вашими улыбками и объятиями, а также красивыми нарядами в палитре торжества:</p>  
+<div class="dresscode-colors">  
+ <div class="palette"> 
+ <span class="color-circle" style="background: #FFC0CB;"></span> 
+ <span class="color-circle" style="background: #FFFACD;"></span>  
+ <span class="color-circle" style="background: #CCCCFF;"></span> 
+ <span class="color-circle" style="background: #BDECB6;"></span> 
+ <span class="color-circle" style="background: #B0E0E6;"></span> 
+ </div>
+ <p>цветочные, пастельные, нежные оттенки, напоминающие поле цветов</p>  
+</div>  
+
+
+
+<div class="dresscode-gallery">
+    <div class="gallery-container">
+        <div class="gallery">
+            <img src="look1.jpg" alt="Образ 1" onclick="openModal('look1.jpg')">
+            <img src="look2.jpg" alt="Образ 2" onclick="openModal('look2.jpg')">
+            <img src="look3.jpg" alt="Образ 3" onclick="openModal('look3.jpg')">
+            <img src="look4.jpg" alt="Образ 4" onclick="openModal('look4.jpg')">
+            <img src="look5.jpg" alt="Образ 5" onclick="openModal('look5.jpg')">
+            <img src="look6.jpg" alt="Образ 6" onclick="openModal('look6.jpg')">
+            <img src="look7.jpg" alt="Образ 7" onclick="openModal('look7.jpg')">
+            <img src="look8.jpg" alt="Образ 8" onclick="openModal('look8.jpg')">
+            <img src="look9.jpg" alt="Образ 9" onclick="openModal('look9.jpg')">
+            <img src="look10.jpg" alt="Образ 10" onclick="openModal('look10.jpg')">
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+</div>
+
+<a href="https://pin.it/BQ7aoG17K" class="button" target="_blank">Перейти на доску Pinterest</a>
+<br><br><br>
+ </div> 
+
+<div class="section no-kids">
+    <h2 class="script-title">Важно знать</h2>
+    <p>Дорогие гости, наше торжество пройдет в формате <strong>взрослого праздника</strong>.  
+    Мы будем рады разделить этот день с вами, но, пожалуйста, учтите,  
+    что мероприятие пройдет <strong>без присутствия детей</strong>.</p>
+    <p>Спасибо за понимание и поддержку! </p>
+</div>
+
+
+ <div class="hero"> 
+ <img src="image5.jpg" alt="Фото молодоженов"> 
+
+ </div>
+
+  <div class="section countdown-section">
+    <h2 class="script-title">Ждём вас через:</h2>
+    <div id="countdown">
+        <div class="countdown-item">
+            <span id="days">00</span>
+            <p>дней</p>
+        </div>
+        <div class="countdown-item">
+            <span id="hours">00</span>
+            <p>часов</p>
+        </div>
+        <div class="countdown-item">
+            <span id="minutes">00</span>
+            <p>минут</p>
+        </div>
+        <div class="countdown-item">
+            <span id="seconds">00</span>
+            <p>секунд</p>
+        </div>
+    </div>
+</div>
+<div class="section"> 
+
+  <p>Все обновления и возможные уточнения по торжеству сможете узнать тут:</p> 
+ <a href="https://t.me/+nIL1_KTgA5hiNGFi" class="button" target="_blank">Вступить в Telegram-канал</a>  
+
+ </div> 
+</div>
+<script>
+// Функция для запуска таймера
+function startCountdown() {
+    const weddingDate = new Date("2025-07-25T00:00:00").getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeLeft = weddingDate - now;
+
+        if (timeLeft <= 0) {
+            document.getElementById("countdown").innerHTML = "<p>Свадьба уже началась!</p>";
+            return;
+        }
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+}
+
+// Запускаем таймер после загрузки страницы
+window.onload = function () {
+    startCountdown();
+};
+</script>
+
+ </body>
+ </html>
